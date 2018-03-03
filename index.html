@@ -8,10 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-messages.js"></script>
   <script src="app.js"></script>
 </head>
-
 <body ng-controller="DynFormCtrl as formCtrl">
   <h1>Formulaire dynamique</h1>
-
   <form name="form" novalidate>
 	<div ng-repeat="field in formCtrl.fields" ng-switch="field.type" ng-form="formRow">
 	{{field.label}}
@@ -33,7 +31,6 @@
 			<span ng-messsage="number">
 	</div>
   </form>
-
 <pre>{{formCtrl.fields| json}}</pre>
 </body>
 </html>
